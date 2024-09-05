@@ -71,10 +71,10 @@ fun! s:register_default_theme()
         \       'linenumber_bg' : ['#eeeeee', '255'],
         \       'vertsplit_fg' : ['#005f87', '24'],
         \       'vertsplit_bg' : ['#eeeeee', '255'],
-        \       'statusline_active_fg' : ['#e4e4e4', '254'],
-        \       'statusline_active_bg' : ['#005f87', '24'],
+        \       'statusline_active_fg' : ['#444444', '254'],
+        \       'statusline_active_bg' : ['#f0f0f0', '24'],
         \       'statusline_inactive_fg' : ['#444444', '238'],
-        \       'statusline_inactive_bg' : ['#d0d0d0', '252'],
+        \       'statusline_inactive_bg' : ['#a0a0ff', '252'],
         \       'todo_fg' : ['#00af5f', '35'],
         \       'todo_bg' : ['#eeeeee', '255'],
         \       'error_fg' : ['#af0000', '124'],
@@ -1166,10 +1166,10 @@ fun! s:apply_syntax_highlightings()
   exec 'hi Search' . s:fg_search_fg . s:bg_search_bg
   exec 'hi IncSearch' . s:fg_incsearch_fg . s:bg_incsearch_bg
   exec 'hi! link CurSearch Search'
-  exec 'hi StatusLine' . s:fg_statusline_active_bg . s:bg_statusline_active_fg
-  exec 'hi StatusLineNC' . s:fg_statusline_inactive_bg . s:bg_statusline_inactive_fg
-  exec 'hi StatusLineTerm' . s:fg_statusline_active_bg . s:bg_statusline_active_fg
-  exec 'hi StatusLineTermNC' . s:fg_statusline_inactive_bg . s:bg_statusline_inactive_fg
+  exec 'hi StatusLine' . s:fg_statusline_active_bg . s:bg_statusline_active_fg . s:ft_none
+  exec 'hi StatusLineNC' . s:fg_statusline_inactive_bg . s:bg_statusline_inactive_fg . s:ft_none
+  exec 'hi StatusLineTerm' . s:fg_statusline_active_bg . s:bg_statusline_active_fg . s:ft_none
+  exec 'hi StatusLineTermNC' . s:fg_statusline_inactive_bg . s:bg_statusline_inactive_fg . s:ft_none
   exec 'hi Visual' . s:fg_visual_fg . s:bg_visual_bg
   exec 'hi Directory' . s:fg_blue
   exec 'hi ModeMsg' . s:fg_olive
